@@ -16,7 +16,7 @@ server     = http.Server( app );
 app.set( 'port', process.env.PORT || 3000 ); //服务启动端口
 app.set( 'views', __dirname + '/views' ); //视图文件
 app.set( 'view engine', 'ejs' ); //页面引擎
-app.use( '/', express.static( path.join( __dirname, 'assets' ))); //静态文件路径
+app.use( '/', express.static( path.join( __dirname, '..','static' ))); //静态文件路径
 app.use( bodyParser.urlencoded({ extended: false }));
 
 routes.all( app );
